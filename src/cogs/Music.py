@@ -1,7 +1,15 @@
-import discord
-from discord.ext import commands 
 import wavelink
-from discord import utils
+import asyncio
+import datetime
+import discord
+import humanize
+import itertools
+import re
+import sys
+import traceback
+from discord.ext import commands
+from typing import Union
+import controller
 
 class MusicController:
 
@@ -52,6 +60,47 @@ class Music(commands.Cog):
         await self.bot.wait_until_ready()
         await self.bot.wavelink.initiate_node(host='127.0.0.1',port=2333,rest_uri='http://127.0.0.1:2333',password='testing',identifier='TEST',region='us_central')
     
+
+    async def on_event_hook(self, event):
+        """Node hook callback."""
+        if isinstance(event, (wavelink.TrackEnd, wavelink.TrackException)):
+            controller = self.get_controller(event.player)
+            controller.next.set()
+
+
+    def get_controller(self, value: Union[commands.Context, wavelink.Player]):
+        if isinstance(value, commands.Context):
+            gid = value.guild.id
+        else:
+            gid = value.guild_id
+
+        try:
+            controller = self.controllers[gid]
+        except KeyError:
+            controller = MusicController(self.bot, gid)
+            self.controllers[gid] = controller
+
+        return controller
+
+
+    async def cog_check(self, ctx):
+        """A local check which applies to all commands in this cog."""
+        if not ctx.guild:
+            raise commands.NoPrivateMessage
+        return True
+
+    async def cog_command_error(self, ctx, error):
+        """A local error handler for all errors arising from commands in this cog."""
+        if isinstance(error, commands.NoPrivateMessage):
+            try:
+                return await ctx.send('This command can not be used in Private Messages.')
+            except discord.HTTPException:
+                pass
+
+        print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+        traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
+
+
     #Play command and join command☑️
     @commands.command()
     async def play(self, ctx, *, query: str, channel: discord.VoiceChannel = None):
@@ -101,7 +150,7 @@ class Music(commands.Cog):
         if not player.paused:
             return await ctx.send('**[ERROR]** I am not currently paused!', delete_after=15)
 
-        await ctx.send('Resuming the player!', delete_after=15)
+        await ctx.send(':play_pause: **Resuming the player!**', delete_after=15)
         await player.set_pause(False) #stop the pause
 
 

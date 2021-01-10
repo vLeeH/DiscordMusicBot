@@ -19,5 +19,5 @@ class Images(commands.Cog):
                 await ctx.send(embed=embed)        
 
 
-def setup(client): 
-    client.add_cog(Images(client))
+def setup(bot): 
+    bot.add_cog(Images(bot))
