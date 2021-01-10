@@ -10,6 +10,8 @@ from discord.ext import commands
 from typing import Union
 import controller
 
+RURL = re.compile('https?:\/\/(?:www\.)?.+')
+
 class MusicController:
 
     def __init__(self, bot, guild_id):
@@ -25,6 +27,7 @@ class MusicController:
 
         self.bot.loop.create_task(self.controller_loop())
 
+    
     async def controller_loop(self):
         await self.bot.wait_until_ready()
 
@@ -48,7 +51,8 @@ class Music(commands.Cog):
     pass
     def __init__(self, bot):
         self.bot = bot
-
+        self.controllers = {}
+        
         if not hasattr(bot, 'wavelink'):
             self.bot.wavelink = wavelink.Client(bot=self.bot)
 
@@ -94,15 +98,21 @@ class Music(commands.Cog):
             except AttributeError: 
                 raise discord.DiscordException('_No channel to join_. Please either **specify a valid channel or join one**.')
             
-            player = self.bot.wavelink.get_player(ctx.guild.id)
-            if not player.is_connected:
-                await ctx.send(f'**Joined** `{channel.name}`  :page_facing_up: And for questions: `sayhelp`')
-                try:
-                    await player.connect(channel.id)
-                    print('Join command worked.')
-                except Exception as c:  
-                    print(f'[ERRO] {c}')
-                    print('Join command did not work.')
+        player = self.bot.wavelink.get_player(ctx.guild.id)
+        if not player.is_connected:
+            await ctx.send(f'**Joined** `{channel.name}`  :page_facing_up: And for questions: `sayhelp`')
+            try:
+                await player.connect(channel.id)
+                print('Join command worked.')
+            except Exception as c:  
+                print(f'[ERRO] {c}')
+                print('Join command did not work.')
+
+        controller = self.get_controller(ctx)
+        controller.channel = ctx.channel
+        
+        if not RURL.match(query):
+            query = f'ytsearch:{query}'
 
         tracks = await self.bot.wavelink.get_tracks(f'ytsearch:{query}')
 
@@ -113,8 +123,12 @@ class Music(commands.Cog):
         if not player.is_connected:
             await ctx.invoke(self.connect_)
         
-        await ctx.send(f'**Playing** :notes: `{str(tracks[0])}` - Now!')
-        await player.play(tracks[0])
+        track = tracks[0]
+
+        controller = self.get_controller(ctx)
+
+        await controller.queue.put(track)
+        await ctx.send(f'**Playing** :notes: `{str(track)}` - Now!')
     
 
     #Pause command☑️.
