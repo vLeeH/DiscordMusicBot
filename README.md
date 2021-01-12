@@ -2,9 +2,15 @@
 
 - I updated additing musics comands
 
-`pip install discord.py`
-`pip install Lavalink`
-`py -3.7 -m pip install wavelink`
+```
+pip install discord.py
+```
+```
+pip install Lavalink
+```
+```
+py -3.7 -m pip install wavelink
+```
 
 ## Commands 
 
