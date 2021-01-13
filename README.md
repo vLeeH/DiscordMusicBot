@@ -1,4 +1,4 @@
-# Discord Music Bot (Mikasa Music)
+# Discord Music Bot 
 
 - I updated additing musics comands
 
