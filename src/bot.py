@@ -21,7 +21,7 @@ async def on_message(message):
         embedVar.add_field(name="Prefix ", value="For anything commands use the prefix **,** " ,inline=False)
         embedVar.add_field(name="About the role bot", value="It's importante that the bot must have all permissions. " ,inline=False)
         embedVar.add_field(name="Learn more ", value=f"To learn more about the bot -> https://github.com/vLeeH/MikasaBot : " ,inline=False)
-        embedVar.add_field(name=":notes: - Musics commands (8)", value="`,play` |`,pause` | `,resume` | `,skip` | `,now_playing(np)` | `,queue` | `,stop` | `info`", inline=False)
+        embedVar.add_field(name=":notes: - Musics commands (8)", value="`,play` |`,pause` | `,resume` | `,skip` | `,now_playing(np)` | `,queue` | `,stop`", inline=False)
 
         await message.delete()
         await message.channel.send(embed=embedVar)
