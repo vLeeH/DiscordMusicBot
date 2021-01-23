@@ -11,7 +11,9 @@ pip install Lavalink
 `
 py -3.7 -m pip install wavelink
 `
-
+`
+python src/bot.py
+` - To run the code and see the bot working
 ## Commands 
 
 ### Commands found: 8
