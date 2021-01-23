@@ -5,12 +5,15 @@
 `
 pip install discord.py
 `
+<br>
 `
 pip install Lavalink
 `
+<br>
 `
 py -3.7 -m pip install wavelink
 `
+<br>
 `
 python src/bot.py
 ` - To run the code and see the bot working
