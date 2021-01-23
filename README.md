@@ -1,6 +1,6 @@
 # Discord Music Bot - (Mikasa V2.0 - MikasaMusic)
 
-- I updated additing musics comands
+- I updated additing musics comands. In this bot i used the library Lavalink and the wrapper Wavelink.
 
 `
 pip install discord.py
