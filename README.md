@@ -14,7 +14,7 @@ pip install Lavalink
 ```
 
 ```
-py -3.7 -m pip install wavelink
+py -3.8 -m pip install wavelink
 ```
 
 ## Compile
