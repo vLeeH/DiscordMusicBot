@@ -3,21 +3,26 @@
 - I updated additing **musics comands**. 
 - In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
 
-`
+## Libs
+
+```
 pip install discord.py
-`
-<br>
-`
+```
+
+```
 pip install Lavalink
-`
-<br>
-`
+```
+
+```
 py -3.7 -m pip install wavelink
-`
-<br>
-`
+```
+
+## Compile
+To run the code and see the bot working
+```
 python src/bot.py
-` - To run the code and see the bot working
+``` 
+
 ## Commands 
 
 ### Commands found: 8
