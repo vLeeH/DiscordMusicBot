@@ -22,6 +22,9 @@ To run the code and see the bot working
 ```
 python src/bot.py
 ``` 
+```
+java -jar Lavalink.jar
+```
 
 ## Commands 
 
