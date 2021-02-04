@@ -27,4 +27,4 @@ python src/bot.py
 ```
 java -jar Lavalink.jar
 ```
-
+**Note:** don't forget to create a file `token.txt` and put the Discord API token.
