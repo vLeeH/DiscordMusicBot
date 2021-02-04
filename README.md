@@ -38,7 +38,3 @@ java -jar Lavalink.jar
 - ,now_playing 
 - ,queue
 - ,stop 
-
-### Languages 🔧
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png" width="60px" height="60px">
