@@ -22,9 +22,9 @@ py -3.8 -m pip install wavelink
 ## Compile
 To run the code and see the bot working
 ```
-python src/bot.py
-``` 
-```
 java -jar Lavalink.jar
 ```
+```
+python src/bot.py
+``` 
 **Note:** don't forget to create a file `token.txt` and put the Discord API token.
