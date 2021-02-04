@@ -1,6 +1,6 @@
-# Discord Music Bot 
-
-- I updated additing **musics comands** - V2.0. 
+# Discord Music Bot 🤖
+> Create a Discord Music Bot
+- I updated additing **musics comands** - V2.0
 - In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
 
 ## Libs
