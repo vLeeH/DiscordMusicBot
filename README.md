@@ -1,6 +1,6 @@
-# Discord Music Bot - (Mikasa V2.0 - MikasaMusic)
+# Discord Music Bot 
 
-- I updated additing **musics comands**. 
+- I updated additing **musics comands** - V2.0. 
 - In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
 
 ## Libs
@@ -26,15 +26,3 @@ python src/bot.py
 java -jar Lavalink.jar
 ```
 
-## Commands 
-
-### Commands found: 8
-
-- sayhelp
-- ,play
-- ,pause
-- ,resume
-- ,skip 
-- ,now_playing 
-- ,queue
-- ,stop 
