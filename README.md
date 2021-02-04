@@ -1,5 +1,5 @@
 # Discord Music Bot 🤖
-> <i> Create a Discord Music Bot </i>
+> <i> Create your Discord Music Bot </i>
 - I updated additing **musics comands** - V2.0
 - In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
 
