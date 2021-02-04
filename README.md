@@ -3,6 +3,8 @@
 - I updated additing **musics comands** - V2.0
 - In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
 
+Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
+
 ## Libs
 
 ```
