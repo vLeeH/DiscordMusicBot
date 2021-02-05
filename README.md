@@ -5,7 +5,8 @@
 Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
 
 ## Libs
-DOWNLOAD **Java 11** - https://jdk.java.net/java-se-ri/11
+DOWNLOAD **Java 11** - https://jdk.java.net/java-se-ri/11<br>  
+DOWNLOAD **Python 3.8** - https://www.python.org/downloads/
 ```
 pip install discord.py
 ```
