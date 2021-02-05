@@ -1,5 +1,5 @@
-# Easy Discord Music Bot 🤖🎵 
-> <i> Create your Discord Music Bot </i>
+# Discord Music Bot 🤖🎵 
+> <i>Easy way to create your Discord Music Bot </i>
 - In this bot i used the library <a href="https://github.com/Frederikam/Lavalink">Lavalink</a> and the wrapper <a  href="https://github.com/PythonistaGuild/Wavelink">Wavelink</a>.
 
 ## Libs
