@@ -1,7 +1,6 @@
 # Discord Music Bot 🤖🎵 
 > <i> Create your Discord Music Bot </i>
-- I updated additing **musics comands** - V2.0
-- In this bot i used the library **Lavalink** and the wrapper **Wavelink**.
+- In this bot i used the library <a href="https://github.com/Frederikam/Lavalink">Lavalink</a> and the wrapper <a  href="https://github.com/PythonistaGuild/Wavelink">Wavelink</a>.
 
 Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
 
