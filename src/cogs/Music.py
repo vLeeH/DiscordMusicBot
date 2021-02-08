@@ -48,7 +48,6 @@ class MusicController:
 
 
 class Music(commands.Cog): 
-    pass
     def __init__(self, bot):
         self.bot = bot
         self.controllers = {}
