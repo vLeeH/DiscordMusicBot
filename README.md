@@ -17,6 +17,9 @@ pip install Lavalink
 py -3.8 -m pip install wavelink
 ```
 
+## Code 
+Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
+
 ## Compile
 To run the code and see the bot working
 ```
@@ -26,7 +29,4 @@ java -jar Lavalink.jar
 python src/bot.py
 ``` 
 **Note:** don't forget to create a file `token.txt` and put the Discord API token.
-
-## Code 
-Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
 
