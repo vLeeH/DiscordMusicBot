@@ -18,7 +18,7 @@ py -3.8 -m pip install wavelink
 ```
 
 ## Code 
-Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a>
+Source code (Cogs) -> <a href="https://github.com/vLeeH/Lavalink-discord/blob/main/src/cogs/Music.py">Music.py</a> <br>
 Prefix -> `,`
 
 ## Compile
